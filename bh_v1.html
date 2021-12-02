@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <link rel="stylesheet" href="bh_v1.css" />
+  <body>
+    <div class="wrapper">
+      <h1>header 1</h1>
+      <h2>header 2</h2>
+      <h3>header 3</h3>
+      <h4>header 4</h4>
+      <h5>header 5</h5>
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+        mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+        voluptatum laborum numquam blanditiis harum quisquam eius sed odit
+        fugiat iusto fuga praesentium optio, eaque rerum! Provident similique
+        accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut
+        molestias architecto voluptate aliquam nihil, eveniet aliquid culpa
+        officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum
+        nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. </p>
+        
+       <p>Quo neque error repudiandae fuga? Ipsa laudantium molestias eos sapiente officiis
+        modi at sunt excepturi expedita sint? Sed quibusdam recusandae alias
+        error harum maxime adipisci amet laborum. Perspiciatis minima nesciunt
+        dolorem! Officiis iure rerum voluptates a cumque velit quibusdam sed
+        amet tempora. Sit laborum ab, eius fugit doloribus tenetur fugiat,
+        temporibus enim commodi iusto libero magni deleniti quod quam
+        consequuntur!</p>
+    </div>
+
+    <div class="wrapper">
+      <p>Default Button</p>
+      <ul>
+        <li><button class="bh_btn">Button</button></li>
+        <li><button class="bh_btn">Button <span>+</span></button></li>
+      </ul>
+      <p>Disabled Button</p>
+      <ul>
+        <li><button class="bh_btn bh_disabled">Button</button></li>
+        <li><button class="bh_btn bh_disabled">Button +</button></li>
+      </ul>
+      <p>Outline Button</p>
+      <ul>
+        <li><button class="bh_btn_outline">Button</button></li>
+        <li><button class="bh_btn_outline">Button +</button></li>
+      </ul>
+      <p>Text Button</p>
+      <ul>
+        <li><button class="bh_btn_text">Button</button></li>
+        <li><button class="bh_btn_text">Button +</button></li>
+      </ul>
+    </div>
+   
+    <div class="wrapper">
+      <p>Text</p>
+      <input type="text" maxlength="15" class="text" name="text" placeholder="Text" />
+      <p>Error</p>
+      <input type="text" maxlength="15" class="text error" name="text" placeholder="Error"/>
+      <p>Disabled</p>
+      <input type="text" maxlength="15" class="text disabled" name="text" placeholder="Disabled"/>
+    </div>
+
+    <div class="wrapper">
+      <p>Text Area</p>
+      <textarea name="message">
+      </textarea>
+    </div>
+
+    <div class="wrapper">
+      <p>Double Field Left</p>
+      <select class="bh_selectLeft">
+        <option value="male">Static</option>
+        <option value="female">Static</option>
+      </select>
+    </div>
+
+    <div class="wrapper">
+      <p>Double Field Right</p>
+      <select class="bh_selectRight">
+        <option value="male">Static</option>
+        <option value="female">Static</option>
+      </select>
+    </div>
+
+    <div class="wrapper">
+      <p>Double Fields</p>
+      <div class="bh_selectDropdown">
+        <select class="bh_selectLeft">
+          <option value="male">Static</option>
+          <option value="female">Static</option>
+        </select>
+        <select class="bh_selectRight">
+          <option value="male">Static</option>
+          <option value="female">Static</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <p>Search</p>
+      <input type="search" class="search" placeholder="Search" />
+    </div>
+
+    <div class="wrapper">
+      <p>Dropdown</p>
+      <input
+        type="search"
+        class="dropdown"
+        name="search"
+        placeholder="Search"
+      />
+    </div>
+
+    <div class="wrapper">
+      <p>Card</p>
+      <p>Line Item</p>
+      <div class="bh_card">
+        <h3>Title</h3>
+        <p>Content</p>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <p>Header</p>
+      <div class="bh_header">
+          <span>Last Modified 02/21/2020</span>
+          <span class="icons">
+            <img src="images/icons/edit.png">
+            <img src="images/icons/trash.png">
+          </span>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <p>Print Line Item</p>
+      <div class="bh_lineItem">
+        <h3>Title</h3>
+        <p>Content</p>
+      </div>
+    </div>
+
+    <div class="wrapper">
+      <p>Badge</p>
+      <span class="bh_badge">3</span>
+    </div>
+
+    <div class="wrapper">
+      <p>Controls</p>
+      <p>Checkbox</p>
+      <label class="container">
+        <input type="checkbox">
+      </label>
+      <p>Radio Button</p>
+      <label class="container">
+        <input type="radio">
+      </label>
+      <p>Switch</p>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+      <p>Switch Disabled</p>
+      <label class="switch disabled">
+        <input type="checkbox" checked>
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="wrapper">
+      <p>View Only Pill</p>
+      <p>Progress</p>
+      <span class="bh_pill_progress">In treatment</span>
+      <p>Good</p>
+      <span class="bh_pill_good">Good</span>
+      <p>Error</p>
+      <span class="bh_pill_error">Error</span>
+      <p>Default</p>
+      <span class="bh_pill_default">Default</span>
+      <p>Neutral</p>
+      <span class="bh_pill_neutral">In treatment</span>
+    </div>
+
+    <div class="wrapper">
+      <p>Selectable Pill</p>
+      <button class="bh_pill_deselected">In treatment</span>
+    </div>
+
+    <div class="wrapper">
+      <p>Tab</p>
+      <div class="tab">Payment Details</div>
+    </div>
+
+    <div class="wrapper">
+      <p>Step by Step Tabs</p>
+      <div class="tab"><span class="blue">1</span>Funder Policy</div>
+      <div class="tab"><span class="white">1</span>Funder Policy</div>
+      <div class="tab"><span class="">1</span>Funder Policy</div>
+    </div>
+
+    <div class="wrapper">
+      <p>Selection</p>
+      <button class="bh_selection">Referring provider</button>
+      <p>Selection Disabled</p>
+      <button class="bh_selection disabled">Referring provider</button>
+    </div>
+
+    <div class="wrapper">
+      <p>Filter</p>
+      <p>Dropdown</p>
+      <select class="bh_selectDropdown">
+        <option value="volvo">Title</option>
+        <option value="saab">Sample</option>
+        <option value="saab">Sample</option>
+      </select>
+      </br>
+      </br>
+      <select class="bh_selectDropdownSquare">
+        <option value="volvo">Title</option>
+        <option value="saab">Sample</option>
+        <option value="saab">Sample</option>
+      </select>
+    </div>
+
+    <div class="wrapper">
+      <p>Clear</p>
+      <select class="bh_clear">
+        <option value="volvo">Clear Filters</option>
+      </select>
+    </div>
+
+    <div class="wrapper">
+      <p>Clear</p>
+      <select class="bh_clear_round">
+        <option value="volvo">Clear Filters</option>
+      </select>
+    </div>
+
+    <div class="wrapper">
+      <p>Clear</p>
+      <select class="bh_filter">
+        <option value="volvo">Filter</option>
+      </select>
+    </div>
+  </body>
+</html>
