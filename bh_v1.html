@@ -18,6 +18,7 @@
       <h3>header 3</h3>
       <h4>header 4</h4>
       <h5>header 5</h5>
+      <h6>header 6</h6>
 
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
         mollitia, molestiae quas vel sint commodi repudiandae consequuntur
@@ -232,23 +233,63 @@
 
     <div class="wrapper">
       <p>Clear</p>
-      <select class="bh_clear">
-        <option value="volvo">Clear Filters</option>
-      </select>
+      <button class="bh_clear">
+        Clear Filters
+      </button>
     </div>
 
     <div class="wrapper">
       <p>Clear</p>
-      <select class="bh_clear_round">
-        <option value="volvo">Clear Filters</option>
-      </select>
+      <button class="bh_clear_round">
+        Clear Filters
+      </button>
     </div>
 
     <div class="wrapper">
       <p>Clear</p>
-      <select class="bh_filter">
-        <option value="volvo">Filter</option>
-      </select>
+      <button class="bh_filter">
+        Filter
+      </button>
+    </div>
+
+    <div class="wrapper">
+      <p>Multi Select</p>
+      <div class="wrappermulti">
+        <input type="search" class="search" placeholder="Search" />
+        <select class="multiselect" multiple>
+          <option value="Option 1">Option 1</option>
+          <option value="Option 2">Option 2</option>
+          <option value="Option 3">Option 3</option>
+          <option value="Option 4">Option 4</option>
+          <option value="Option 5">Option 5</option>
+          <option value="Option 6">Option 6</option>
+        </select>
+        <h6>6 items</h6>
+      </div>
+    </div>
+    
+    <div class="wrapper" style="overflow-x:auto;">
+      <p>Table</p>
+      <table class="bh_table">
+        <tr>
+          <th>Title</th>
+          <th>Column</th>
+          <th>Status</th>
+          <th>Icon Right</th>
+          <th>Icon Left</th>
+          <th>Checkbox</th>
+          <th>Icons center</th>
+        </tr>
+        <tr >
+          <td>Title</td>
+          <td>Text</td>
+          <td><span class="bh_pill_progress">In treatment</span></td>
+          <td><img src="images/icons/down.png"/></td>
+          <td><img src="images/icons/trash.png"/></td>
+          <td><input type="checkbox"></td>
+          <td class="center"><img src="images/icons/more-vertical-alt.png"/></td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>
