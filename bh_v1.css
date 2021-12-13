@@ -14,7 +14,8 @@
 :root {
   --font-main: "DM Sans";
   --clr-black-primary: #282E33;
-  --clr-white: #fcfdff;
+  --clr-white: #fff;
+  --clr-white-bg: #fcfdff;
   --clr-blue: #1d6eb8;
   --clr-blue-border: #5e9dd6;
   --clr-blue-light: #ebeff5;
@@ -26,65 +27,65 @@
   --clr-green-dark: #4D994F;
   --clr-orange-light: #F9C270;
   --clr-red-error: #E06C6C;
+
+  --input-bgImg: 135px 5px;
+  --pill-padding: 6px 16px;
 }
 
-body {
+html {
   font-family: var(--font-main);
-  font-size: 1em;
+  font-size: 1rem;
   font-weight: normal;
-  background-color: var(--clr-white);
+  background-color: var(--clr-white-bg);
   color: var(--clr-black-primary);
 }
 
 p, h1, h2, h3, h4, h5 {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 h1 {
   font-weight: normal;
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 120%;
 }
 h2 {
   font-style: normal;
   font-weight: normal;
-  font-size: 1.75em;
+  font-size: 1.75rem;
   line-height: 120%;
   letter-spacing: 0.00625em;
 }
 h3 {
   font-style: medium;
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   line-height: 128%;
 }
 h4 {
   font-style: medium;
   font-weight: 500;
-  font-size: 1.25em;
+  font-size: 1.25rem;
   line-height: 120%;
   letter-spacing: 0.0125em;
 }
 h5 {
   font-style: normal;
   font-weight: normal;
-  font-size: 1.25em;
+  font-size: 1.1rem;
   line-height: 120%;
 }
 h6 {
   font-style: normal;
   font-weight: normal;
-  font-size: .8em;
+  font-size: .8rem;
   line-height: 120%;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* buttons */
-
-/* default button */
 .bh_btn{
   font-weight: 900;
-  color: #fff;
+  color: var(--clr-white);
   border-radius: 40px;
   padding: 10px 24px;
   border: none;
@@ -107,13 +108,13 @@ h6 {
   font-weight: 900;
   color: #414a52;
   border-radius: 40px;
-  padding: 10px 24px;
+  padding: 0.625em 1.5em;
   border: 1px solid #b6bfcc;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--clr-white);
 }
 .bh_btn_outline:hover {
-  background-color: #fff;
+  background-color: var(--clr-white);
   cursor: pointer;
 }
 .bh_btn_outline:focus {
@@ -131,10 +132,10 @@ h6 {
   font-weight: 900;
   color: var(--clr-blue);
   border-radius: 40px;
-  padding: 10px 24px;
+  padding: 0.625em 1.5em;
   border: none;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--clr-white);
 }
 .bh_btn_text:hover {
   background-color: #e1ebf5;
@@ -152,9 +153,7 @@ h6 {
   border: none;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* inputs */
-
 input,
 input.text {
   border-radius: 20px;
@@ -240,19 +239,19 @@ input.dropdown {
   padding: 0.5em 0.5em 0.5em 0.7em;
   background-image: url(images/icons/down-gray.png);
   background-repeat: no-repeat;
-  background-position: 135px 5px;
+  background-position: var(--input-bgImg);
 }
 input.dropdown:hover {
   border: 1px solid var(--clr-blue-hover);
   background-image: url(images/icons/up-gray.png);
   background-repeat: no-repeat;
-  background-position: 135px 5px;
+  background-position: var(--input-bgImg)
 }
 input.dropdown:focus {
   background-color: var(--clr-blue-light);
   background-image: url(images/icons/up-blue.png);
   background-repeat: no-repeat;
-  background-position: 135px 5px;
+  background-position: var(--input-bgImg);
 }
 
 textArea {
@@ -303,14 +302,14 @@ input:disabled {
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-.slider:before {
+.slider::before {
   position: absolute;
   content: "";
   height: 13px;
   width: 13px;
   left: 4px;
   bottom: 4px;
-  background-color: #fff;
+  background-color: var(--clr-white);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -340,9 +339,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* selects */
-
 select {
   padding: 0.5em;
   appearance: none;
@@ -422,9 +419,7 @@ select.multiselect {
   padding: 1em;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* table */
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -434,14 +429,10 @@ table {
 th, td {
   text-align: left;
   padding: 8px;
-}
-td {
-  padding: 8px;
+  font-size: .9rem;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* cards */
-
 .bh_card {
   padding: 0.75em 1em;
   margin-top: 0.2em;
@@ -458,7 +449,7 @@ td {
 .bh_card h3,
 .bh_card p {
   margin: 0.2em;
-  font-size: 0.75em;
+  font-size: 0.75rem;
 }
 .bh_lineItem {
   font-style: normal;
@@ -466,32 +457,26 @@ td {
   line-height: 120%;
   letter-spacing: 0.2px;
   color: #414a52;
-  flex: none;
-  order: 0;
-  align-self: stretch;
-  flex-grow: 0;
-  margin: 2px 0x;
+  margin: 2px 0;
   border: 1px solid #ccc;
   padding: 0.5em;
 }
 .bh_lineItem h3,
 .bh_lineItem p {
   margin: 0.1em 0 0 0;
-  font-size: 8px;
+  font-size: 0.5rem;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* header */
-
 .bh_header {
   background: #f0f4fa;
   border: 1px solid var(--clr-gray-light);
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 120%;
   letter-spacing: 0.2px;
   color: #616e7a;
@@ -513,15 +498,13 @@ td {
   filter: brightness(80%) !important;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* badge & pills */
-
 .bh_badge {
   border-radius: 15px;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
   background-color: var(--clr-red-error);
-  color: #fff;
+  color: var(--clr-white);
   padding: 2px 7px;
 }
 .bh_pill_progress,
@@ -534,11 +517,11 @@ td {
   border-radius: 16px;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 0.75rem;
   line-height: 120%;
   text-align: center;
   letter-spacing: 0.2px;
-  padding: 6px 16px;
+  padding: var(--pill-padding);
 }
 .bh_pill_progress {
   background: #fbf1e2;
@@ -573,16 +556,14 @@ td {
   border: 1px solid var(--clr-blue);
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* tabs */
-
 .tab {
   width: 119px;
   border-bottom: 2px solid var(--clr-blue);
   color: var(--clr-blue);
   padding: .5em;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .tab span.blue {
   border-radius: 20px;
@@ -594,7 +575,7 @@ td {
   display: inline-block;
   margin-right: 0.5em;
   vertical-align: top;
-  font-size: 11px;
+  font-size: 0.688rem;
 }
 .tab span.white {
   border-radius: 20px;
@@ -607,19 +588,17 @@ td {
   display: inline-block;
   margin-right: 0.5em;
   vertical-align: top;
-  font-size: 11px;
+  font-size: 0.688rem;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* selection */
-
 .bh_selection {
   background: var(--clr-white);
   border-radius: 8px;
   text-align: center;
   border: 1px solid var(--clr-gray-medium);
   min-height: 112px;
-  font-size: 1em;
+  font-size: 1rem;
   width: 246px;
   background-image: url("images/icons/check-o-gray.png");
   background-repeat: no-repeat;
@@ -650,9 +629,7 @@ td {
   cursor: not-allowed;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* filter */
-
 select:hover {
   cursor: pointer;
 }
@@ -662,8 +639,8 @@ select:hover {
   border-bottom-right-radius: 1em;
   border: 1px solid var(--clr-gray-light);
   margin-right: -5px;
-  width: 110px;
-  font-size: 14px;
+  min-width: 110px;
+  font-size: 0.875rem;
   background-color: var(--clr-white);
 }
 
@@ -675,8 +652,8 @@ select:hover {
   background-image: url(images/icons/sort-az.png);
   background-repeat: no-repeat;
   background-position: 44px 8px;
-  font-size: 14px;
-  width: 80px;
+  font-size: 0.875rem;
+  min-width: 80px;
   background-color: var(--clr-white);
   text-align: left;
 }
@@ -695,7 +672,7 @@ select:hover {
   border-radius: 20px;
   border: 1px solid var(--clr-gray-light);
   margin-right: -5px;
-  font-size: 14px;
+  font-size: 0.875rem;
   width: 110px;
   background-color: var(--clr-white);
 }
@@ -711,9 +688,7 @@ select:hover {
   background-color: var(--clr-blue-light);
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* BH Classes */
-
 .bh_warning {
   color: var(--clr-orange-light);
 }
@@ -735,9 +710,7 @@ select:hover {
   cursor: alias;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* temp layout */
-
 .wrapper {
   padding: 1.3em;
   border: 2px dashed #414a52;
